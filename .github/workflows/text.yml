@@ -4,5 +4,5 @@ jobs:
     checkout-repo: #job name
         runs-on: ubuntu-latest #docker image on which job will run
         steps:
-            - users: actions/checkout@v2
+            - uses: actions/checkout@v2
             - run: tree
