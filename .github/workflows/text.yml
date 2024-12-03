@@ -1,0 +1,7 @@
+name: My first github action #name of workflow
+on: [push] # when workflow should run
+jobs: 
+    print-hello-world: #job name
+        runs-on: ubuntu-latest #docker image on which job will run
+        steps:
+            -run: echo "Hello World"
