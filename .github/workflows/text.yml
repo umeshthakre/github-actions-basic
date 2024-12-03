@@ -1,7 +1,8 @@
-name: My first github action #name of workflow
+name: checking out repo using github actions #name of workflow
 on: [push] # when workflow should run
 jobs: 
-    print-hello-world: #job name
+    checkout-repo: #job name
         runs-on: ubuntu-latest #docker image on which job will run
         steps:
-            - run: echo "Hello World"
+            - users: actions/checkout@v2
+            - run: tree
