@@ -1,13 +1,11 @@
 name: checking out repo using github actions #name of workflow
 on: [push] # when workflow should run
-jobs: 
-    checkout-repo: #job name
-        runs-on: ubuntu-latest #docker image on which job will run
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-                with:
-                    node-version: '18.19.1'
-            - run: npm install
-            - run: npm run build
-            - run: echo "Completed react build"
+jobs:
+    steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+         with:
+            node-version: 18
+        - run: npm install
+        - run: npm run build
+        - run: echo "Build completed"
